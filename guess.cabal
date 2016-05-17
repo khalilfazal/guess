@@ -1,0 +1,24 @@
+name:                guess
+version:             0.0
+synopsis:            Helper to guess a number between two extremes using binary search.
+description:         Usage: `guess <min> <max>`. Use up or down arrow keys to narrow down search.
+homepage:            https://github.com/khalilfazal/guess#readme
+license:             GPL-2
+license-file:        LICENSE
+author:              Khalil Fazal
+maintainer:          khalil.fazal@uoit.net
+copyright:           2016 <khalil.fazal@uoit.net>
+category:            Simple
+build-type:          Simple
+cabal-version:       >=1.10
+
+executable guess
+  hs-source-dirs:      src
+  main-is:             Main.hs
+  default-language:    Haskell2010
+  other-extensions:    LambdaCase
+  build-depends:       base,
+                       concatenative,
+                       composition,
+                       stm,
+                       vty
