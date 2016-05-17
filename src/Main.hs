@@ -19,7 +19,7 @@ showApproxFrac :: Rational -> String
 showApproxFrac = show . fromRat
 
 guess :: Input -> Rational -> Rational -> IO ()
-guess controller@(Input{_eventChannel=keyListener}) x y = do
+guess controller@Input{_eventChannel=keyListener} x y = do
     let n = (x + y) / 2
     (putStrLn .:. triAp showApproxFrac (printf "(%s, %s) -> %s")) x y n
 
